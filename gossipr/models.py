@@ -15,3 +15,13 @@ class Room(DBObject):
 
 class Message(DBObject):
     BELONGSTO = ['room']
+
+    @classmethod
+    def doSearch(klass, query, startdate, enddate):
+        where = ['message like ?', "%" + query + "%"]
+        if startdate != "":
+            where = joinWheres(where, ['created_at >= ?', startdate])
+        if enddate != "":
+            where = joinWheres(where, ['created_at <= ?', enddate])
+        return klass.find(where=where)
+

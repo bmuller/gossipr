@@ -1,5 +1,5 @@
 CONFIG = {
-    'rooms': [],
+    'rooms': {},
     'db.user': 'root',
     'db.pass': '',    
     'db.name': 'gossipr',
@@ -10,5 +10,6 @@ CONFIG = {
     'xmpp.port': 5524,
     'xmpp.muc.host': 'conference.localhost',
     'xmpp.gossipr.host': 'gossipr.localhost',
-    'webport': 8080
+    'xmpp.gossipr.resource': 'gossipr',
+    'web.port': 8080
     }
