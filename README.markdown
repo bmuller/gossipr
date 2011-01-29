@@ -10,7 +10,7 @@ Gossipr is a Jabber (XMPP) component that logs chat rooms to a database and prov
 
 2. Install [Twisted](http://twistedmatrix.com).
 3. Install [Twistar](http://findingscience.com/twistar/)
-4. Install Divmod's [Nevow](http://divmod.org)
+4. Install [mako](http://www.makotemplates.org)
 
 ## Installation
 First, get the source:

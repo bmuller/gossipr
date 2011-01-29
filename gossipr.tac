@@ -1,8 +1,7 @@
-from twisted.application import service, internet
+from twisted.application import service, internet, strports
 from twisted.words.protocols.jabber import component
 from twisted.enterprise import adbapi
-
-from nevow import appserver
+from twisted.web2 import server, channel, log
 
 from twistar.registry import Registry
 from twistar.dbconfig.base import InteractionBase
@@ -34,5 +33,8 @@ if 'xmpp' in CONFIG['interfaces']:
 
 # Website
 if 'web' in CONFIG['interfaces']:
-    website = appserver.NevowSite(website.MainPage(CONFIG))
-    internet.TCPServer(CONFIG['web.port'], website).setServiceParent(application)
+    res = log.LogWrapperResource(website.MainPage(CONFIG))
+    log.DefaultCommonAccessLoggingObserver().start()
+    website = server.Site(res)
+    s = strports.service('tcp:%s' % CONFIG['web.port'], channel.HTTPFactory(website))
+    s.setServiceParent(application)
