@@ -11,8 +11,8 @@ setup(
     author="Brian Muller",
     author_email="bamuller@gmail.com",
     license="GPLv3",
-    url="http://findingscience.com/gossipr",
+    url="https://github.com/bmuller/gossipr",
     packages=["gossipr"],
     package_data={'gossipr': ["static/*/*"]},
-    requires=["twisted.enterprise.adbapi", "twisted.words", "twistar"]
+    requires=["twisted.enterprise.adbapi", "twisted.words", "twistar", "mako"]
 )
