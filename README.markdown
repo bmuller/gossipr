@@ -4,11 +4,10 @@ Gossipr is a Jabber (XMPP) component that logs chat rooms to a database and prov
 # Usage
 
 ## Prerequisites
-1. First, edit your jabber server config file to allow for a new component connection.  If you are using [ejabberd](http://www.ejabberd.im/), this can be done by adding the following lines to the services section of your *ejabberd.cfg* file:
+1. First, edit your jabber server config file to allow for a new component connection.  If you are using [ejabberd](http://www.ejabberd.im/), this can be done by adding the following lines to the services section of your *ejabberd.cfg* file.  Make sure to change the password to something actually secret, and then restart your jabber server.
 
       {5524, ejabberd_service, [ {ip, {127, 0, 0, 1}}, {access, all}, {shaper_rule, fast}, {host, "gossipr.localhost", [{password, "secret"}]} ]},
 
-Make sure to change the password to something actually secret, and then restart your jabber server.
 2. Install [Twisted](http://twistedmatrix.com).
 3. Install [Twistar](http://findingscience.com/twistar/)
 4. Install Divmod's [Nevow](http://divmod.org)
