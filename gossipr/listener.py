@@ -91,4 +91,4 @@ class ListenerService(component.Service):
         if self.rooms.has_key(userhost):
             room_id = self.rooms[userhost][0]
             body = xpath.queryForString("/message/body", msg)
-            return Message(speaker=jidparts[0], message=body, room_id=room_id, created_at=datetime.datetime.now()).save()
+            return Message(speaker=jidparts[2], message=body, room_id=room_id, created_at=datetime.datetime.now()).save()

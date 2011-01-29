@@ -1,0 +1,20 @@
+.ui-timepicker-div .ui-widget-header{ margin-bottom: 8px; }
+.ui-timepicker-div dl{ text-align: left; }
+.ui-timepicker-div dl dt{ height: 25px; }
+.ui-timepicker-div dl dd{ margin: -25px 0 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+#qform span { padding: 20px; }
+#qform { margin-bottom: 20px; margin-top: 20px; }
+div.container { margin-top: 20px; margin-bottom: 60px; }
+
+
+form span input {
+    -moz-border-radius: 6px 6px 6px 6px;
+    background-color: #F1F1F1;
+    border-color: #E1E1E1 #FFFFFF #FFFFFF -moz-use-text-color;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 5px 8px;
+}
