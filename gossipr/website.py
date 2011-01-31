@@ -44,7 +44,8 @@ class MessageLister(resource.Resource):
         for msg in self.msgs:
             cleaned.append({'speaker': msg.speaker,
                             'created_at': msg.created_at.strftime("%Y-%m-%d %H:%M:%S"),
-                            'msg': self.format(msg.message)})
+                            'msg': self.format(msg.message),
+                            'id': int(msg.id)})
         return render('logs.mako', msgs=cleaned, startdate=self.startdate, enddate=self.enddate, query=self.query, room=self.room)
 
 

@@ -20,7 +20,11 @@
 	<th scope="col">message</th>
       </tr>
 % for msg in msgs:
+% if msg['id'] % 2 == 0:
+      <tr class="alt">
+% else:
       <tr>
+% endif
 	<td>${msg['speaker']}</td>
 	<td>${msg['created_at']}</td>
 	<td>${msg['msg']}</td>
